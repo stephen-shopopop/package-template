@@ -4,12 +4,7 @@
   "description": "cache implementation for nodejs",
   "version": "0.2.0",
   "keywords": [
-    "cache",
-    "redis",
-    "memory",
-    "redis",
-    "valkey",
-    "sqlite"
+    ""
   ],
   "author": "Stephen Deletang <me@stephendeletang.com>",
   "contributors": [
