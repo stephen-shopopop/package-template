@@ -4,10 +4,8 @@
     // Code quality
     "aaron-bond.better-comments",
     "kisstkondoros.vscode-codemetrics",
-    "SonarSource.sonarlint-vscode",
     "streetsidesoftware.code-spell-checker",
     // Docker
-    "ms-vscode-remote.remote-containers",
     "ms-azuretools.vscode-docker",
     // Markdown
     "DavidAnson.vscode-markdownlint",
@@ -42,6 +40,8 @@
     "ms-vscode.makefile-tools",
     // Toml
     "amasfe.even-better-toml",
+    // Yaml
+    "redhat.vscode-yaml",
     // Html
     "htmlhint.vscode-htmlhint",
     // Node test
