@@ -17,8 +17,6 @@
     "eamodio.gitlens",
     "usernamehw.errorlens",
     "github.vscode-github-actions",
-    // Database
-    "cweijan.vscode-database-client2",
     // Theme
     "chadalen.vscode-jetbrains-icon-theme",
     "qvist.jetbrains-new-ui-dark-theme",
@@ -42,8 +40,6 @@
     "amasfe.even-better-toml",
     // Yaml
     "redhat.vscode-yaml",
-    // Html
-    "htmlhint.vscode-htmlhint",
     // Node test
     "connor4312.nodejs-testing",
     // Mise
