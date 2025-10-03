@@ -1,6 +1,7 @@
 # Package Template
 
 <!-- Badges -->
+
 [![npm version](https://img.shields.io/npm/v/@stephen-shopopop/pkg.svg)](https://www.npmjs.com/package/@stephen-shopopop/pkg)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.17.0-brightgreen)](https://nodejs.org)
@@ -51,7 +52,7 @@ npm install @stephen-shopopop/<package-name>
 ### CommonJS
 
 ```javascript
-const { yourFunction } = require('@stephen-shopopop/<package-name>');
+const { yourFunction } = require("@stephen-shopopop/<package-name>");
 
 // Use your package
 yourFunction();
@@ -60,7 +61,7 @@ yourFunction();
 ### ES Modules
 
 ```javascript
-import { yourFunction } from '@stephen-shopopop/<package-name>';
+import { yourFunction } from "@stephen-shopopop/<package-name>";
 
 // Use your package
 yourFunction();
@@ -69,7 +70,7 @@ yourFunction();
 ### TypeScript
 
 ```typescript
-import { yourFunction } from '@stephen-shopopop/<package-name>';
+import { yourFunction } from "@stephen-shopopop/<package-name>";
 
 // Full type support
 yourFunction();
@@ -80,22 +81,26 @@ yourFunction();
 ### Getting Started
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/stephen-shopopop/<pkg>.git
 cd <pkg>
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run tests:
+
 ```bash
 npm test
 ```
 
 4. Build the package:
+
 ```bash
 npm run build
 ```
@@ -108,31 +113,31 @@ Git hooks are automatically installed via `simple-git-hooks` when you run `npm i
 
 ### Primary Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm test` | Run tests with coverage (type check + tests) |
-| `npm run build` | Build the package for production |
-| `npm run lint` | Lint code with Biome |
-| `npm run format` | Format and fix code with Biome |
-| `npm run check` | Run type checks and linting |
+| Command          | Description                                  |
+| ---------------- | -------------------------------------------- |
+| `npm test`       | Run tests with coverage (type check + tests) |
+| `npm run build`  | Build the package for production             |
+| `npm run lint`   | Lint code with Biome                         |
+| `npm run format` | Format and fix code with Biome               |
+| `npm run check`  | Run type checks and linting                  |
 
 ### Additional Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm run coverage` | Generate detailed coverage report |
-| `npm run clean` | Remove build artifacts |
-| `npm run docs` | Generate TypeDoc documentation |
-| `npm run deps:update` | Check for dependency updates |
-| `npm run deps:unused` | Find unused dependencies |
-| `npm run tarball:check` | Preview npm package contents |
-| `npm run publish:dry-run` | Test package publishing |
+| Command                   | Description                       |
+| ------------------------- | --------------------------------- |
+| `npm run coverage`        | Generate detailed coverage report |
+| `npm run clean`           | Remove build artifacts            |
+| `npm run docs`            | Generate TypeDoc documentation    |
+| `npm run deps:update`     | Check for dependency updates      |
+| `npm run deps:unused`     | Find unused dependencies          |
+| `npm run tarball:check`   | Preview npm package contents      |
+| `npm run publish:dry-run` | Test package publishing           |
 
 ### Maintenance Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm run maintenance` | Clean build and node_modules |
+| Command                 | Description                    |
+| ----------------------- | ------------------------------ |
+| `npm run maintenance`   | Clean build and node_modules   |
 | `npm run biome:migrate` | Update Biome to latest version |
 
 ## 📁 Project Structure
@@ -164,6 +169,7 @@ The project uses strict TypeScript configuration. See `tsconfig.json` for detail
 ### Biome
 
 Biome is used for both linting and formatting. Configuration in `biome.json`:
+
 - Enforces consistent code style
 - Validates code quality
 - Auto-fixes issues when possible
@@ -171,6 +177,7 @@ Biome is used for both linting and formatting. Configuration in `biome.json`:
 ### tsup
 
 Build configuration in `package.json`:
+
 - Generates both ESM and CJS outputs
 - Creates TypeScript declarations (.d.ts)
 - Supports Node.js platform
@@ -235,6 +242,7 @@ npm run coverage
 ### Coverage Thresholds
 
 Default coverage thresholds:
+
 - Lines: 80%
 - Functions: 80%
 - Branches: 80%
@@ -248,6 +256,7 @@ npm run build
 ```
 
 This creates:
+
 - `dist/index.js` - ESM bundle
 - `dist/index.cjs` - CommonJS bundle
 - `dist/index.d.ts` - ESM type definitions
@@ -256,10 +265,12 @@ This creates:
 ### Pre-publish Checks
 
 Before publishing, the package automatically:
+
 1. Runs the build process (`prepack` hook)
 2. Validates the package contents
 
 Preview what will be published:
+
 ```bash
 npm run tarball:check
 npm run publish:dry-run
@@ -288,6 +299,7 @@ Contributions are welcome! Please follow these guidelines:
 ### Pre-commit Hooks
 
 The project uses `simple-git-hooks` to run checks before commits:
+
 - TypeScript type checking
 - Biome linting
 
@@ -297,10 +309,9 @@ The project uses `simple-git-hooks` to run checks before commits:
 
 ## 🔗 Links
 
-- [npm Package](https://www.npmjs.com/package/@stephen-shopopop/pkg)
-- [GitHub Repository](https://github.com/stephen-shopopop/pkg)
-- [Issue Tracker](https://github.com/stephen-shopopop/pkg/issues)
-- [Documentation](https://github.com/stephen-shopopop/pkg#readme)
+- [GitHub Repository](https://github.com/stephen-shopopop/package-template)
+- [Issue Tracker](https://github.com/stephen-shopopop/package-template/issues)
+- [Documentation](https://github.com/stephen-shopopop/package-template#readme)
 
 ---
 
