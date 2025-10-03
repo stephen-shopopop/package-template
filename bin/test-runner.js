@@ -19,6 +19,11 @@ process.on('unhandledRejection', (err) => {
   process.exit(1);
 });
 
+/**
+ * @type {import('node:util').ParsedArgs}
+ *
+ * Parses command line arguments and environment variables
+ */
 const args = parseArgs({
   args: argv.slice(2),
   allowPositionals: true,
@@ -57,6 +62,7 @@ const args = parseArgs({
   }
 });
 
+// Show help
 if (args.values?.help) {
   console.log(await readFile(new URL('./README.md', import.meta.url), 'utf8'));
 
@@ -90,6 +96,7 @@ try {
     watch: args.values.watch
   });
 
+  // Force exit if specified
   for (const signal of ['SIGTERM', 'SIGINT']) {
     process.once(signal, () => {
       // Destroy stream to call teardown correctly
@@ -101,6 +108,7 @@ try {
   }
 
   // Log test failures to console
+  // This is useful when using the tap reporter, as it doesn't log failures to console by default
   stream.on('test:fail', (testFail) => {
     console.error(testFail);
 
@@ -108,6 +116,9 @@ try {
   });
 
   // Call tearDown
+  // We use finished instead of stream.on('end') because the end event is not called
+  // when the stream is destroyed (for example when a test fails and the reporter
+  // decides to stop the tests)
   finished(stream, async () => {
     if (fs.existsSync(path.join(process.cwd(), args.values.rootDir, 'teardown.js'))) {
       await import(path.join(process.cwd(), args.values.rootDir, 'teardown.js')).then((x) =>
@@ -118,6 +129,7 @@ try {
     process.exit = 0;
   });
 
+  // Pipe the test stream to the selected reporter
   stream.compose(reporters[args.values.reporter]).pipe(process.stdout);
 
   // If we're running in a GitHub action, adds the gh reporter

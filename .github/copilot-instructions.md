@@ -1,6 +1,6 @@
 # Project Overview
 
-Cache implementation for nodeJs
+Implementation for nodeJs
 
 ## Folder Structure
 
@@ -23,6 +23,7 @@ Cache implementation for nodeJs
 ## Development Commands
 
 ### Primary Commands
+
 - `npm run test` - Run unit tests with coverage, excluding fixtures
 - `npm run lint` - Run standard linter with biome linter
 - `npm run format` - Run standard formatter with biome formatter
@@ -34,21 +35,25 @@ Cache implementation for nodeJs
 ### Core Structure
 
 ### Key Features
+
 - Multiple reporter support (spec, tap, dot, junit, github)
 - Code coverage via node:test
 - Watch mode for development
 
 ### Test Structure
+
 - Tests use `node:test`
 - Test files follow `*.test.{js|ts}` pattern
 
 ### TypeScript Support
+
 - Use tsx for running TypeScript files directly
 - Supports both ESM and CJS module formats
 
 ## Configuration
 
 ### CLI Options for testing
+
 - `--concurrency` or `-c`, to set the number of concurrent tests. Defaults to the number of available CPUs minus one.
 - `--coverage` or `-C`, enables code coverage. Default is `false`
 - `--watch` or `-w`, re-run tests on changes. Default is `false`
