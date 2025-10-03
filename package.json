@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@stephen-shopopop/<pkg>",
-  "description": "<pkg> implementation for nodejs",
+  "name": "@stephen-shopopop/<your-package-name>",
+  "description": "<your-package-name> implementation for nodejs",
   "version": "0.2.0",
   "keywords": [
     ""
@@ -14,13 +14,13 @@
     }
   ],
   "license": "ISC",
-  "homepage": "https://github.com/stephen-shopopop/<pkg>#readme",
+  "homepage": "https://github.com/stephen-shopopop/<your-package-name>#readme",
   "bugs": {
-    "url": "https://github.com/stephen-shopopop/<pkg>/issues"
+    "url": "https://github.com/stephen-shopopop/<your-package-name>/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stephen-shopopop/<pkg>.git"
+    "url": "git+https://github.com/stephen-shopopop/<your-package-name>.git"
   },
   "type": "module",
   "main": "./dist/index.cjs",
