@@ -37,8 +37,9 @@ Replace all placeholder values with your package-specific information:
 #### Update `README.md`
 
 Replace these placeholders throughout the README:
+
 - `<package-name>` → your actual package name
-- `<pkg>` → your package short name
+- `<you-package-name>` → your package short name
 - Update the description and features to match your package
 
 #### Update `LICENSE`
@@ -137,22 +138,26 @@ Before publishing your package, ensure you've:
 This template includes:
 
 ### Build System
+
 - **tsup** - Fast TypeScript bundler
 - Dual package (ESM + CJS) support
 - TypeScript declarations generation
 
 ### Testing
+
 - **node:test** - Native Node.js test runner
 - **c8** - Code coverage
 - Coverage thresholds enforcement
 - Watch mode for development
 
 ### Code Quality
+
 - **Biome** - Fast linting and formatting
 - **TypeScript** - Type checking
 - **simple-git-hooks** - Pre-commit checks
 
 ### Development Tools
+
 - Test runner with custom options
 - Documentation generation with TypeDoc
 - Dependency update tools
